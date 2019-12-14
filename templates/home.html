@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Students' Academic Performancer</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Students' Academic Performance</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/form_predict">Prediksi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://ibb.co/WfDDwYN  " target="_blank">Flowchart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!--
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Selamat Datang!</h1>
+      <p class="lead">Ayo Cek Kesehatan Livermu disini!</p>
+      <hr class="my-4">
+      <p>Sepele adalah sebuah aplikasi untuk memprediksi penyakit liver berdasarkan data-data kandungan darah.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/form_predict" role="button">Mulai Prediksi</a>
+      </p>
+    </div>
+  </div>
+-->
+
+  <div class="container-fluid pt-5 pb-5">
+    <div class="container">
+      <div class="row">        
+        <div class="col-md-8">
+        
+          <h3>Students' Academic Performance</h3>
+
+          <p>The data is collected using a learner activity tracker tool, which called experience API (xAPI). The xAPI is a component of the training and learning architecture (TLA) that enables to monitor learning progress and learner’s actions like reading an article or watching a training video. The experience API helps the learning activity providers to determine the learner, activity and objects that describe a learning experience. The dataset consists of 480 student records and 16 features. The features are classified into three major categories: (1) Demographic features such as gender and nationality. (2) Academic background features such as educational stage, grade Level and section. (3) Behavioral features such as raised hand on class, opening resources, answering survey by parents, and school satisfaction.</p>
+
+          <p>The dataset consists of 305 males and 175 females. The students come from different origins such as 179 students are from Kuwait, 172 students are from Jordan, 28 students from Palestine, 22 students are from Iraq, 17 students from Lebanon, 12 students from Tunis, 11 students from Saudi Arabia, 9 students from Egypt, 7 students from Syria, 6 students from USA, Iran and Libya, 4 students from Morocco and one student from Venezuela.</p>
+
+          <p>The dataset is collected through two educational semesters: 245 student records are collected during the first semester and 235 student records are collected during the second semester.
+
+          The data set includes also the school attendance feature such as the students are classified into two categories based on their absence days: 191 students exceed 7 absence days and 289 students their absence days under 7.</p>
+          
+        </div>
+        <div class="col-md-4">
+          
+          <h3>Attributes</h3>
+
+          <ul>
+            <li><b>Gender</b> - student's gender (nominal: 'Male' or 'Female’)</li>
+            <li><b>Nationality</b> - student's nationality (nominal:’ Kuwait’,’ Lebanon’,’ Egypt’,’ SaudiArabia’,’ USA’,’ Jordan’,’ Venezuela’,’ Iran’,’ Tunis’,’ Morocco’,’ Syria’,’ Palestine’,’ Iraq’,’ Lybia’)</li>
+            <li><b>Place of birth</b> - student's Place of birth (nominal:’ Kuwait’,’ Lebanon’,’ Egypt’,’ SaudiArabia’,’ USA’,’ Jordan’,’ Venezuela’,’ Iran’,’ Tunis’,’ Morocco’,’ Syria’,’ Palestine’,’ Iraq’,’ Lybia’)</li>
+            <li><b>Educational Stages</b> - educational level student belongs (nominal: ‘lowerlevel’,’MiddleSchool’,’HighSchool’)</li>
+            <li><b>Grade Levels</b> - grade student belongs (nominal: ‘G-01’, ‘G-02’, ‘G-03’, ‘G-04’, ‘G-05’, ‘G-06’, ‘G-07’, ‘G-08’, ‘G-09’, ‘G-10’, ‘G-11’, ‘G-12 ‘)</li>
+            <li><b>Section ID</b> - classroom student belongs (nominal:’A’,’B’,’C’)</li>
+            <li><b>Topic</b> - course topic (nominal:’ English’,’ Spanish’, ‘French’,’ Arabic’,’ IT’,’ Math’,’ Chemistry’, ‘Biology’, ‘Science’,’ History’,’ Quran’,’ Geology’)</li>
+            <li><b>Semester</b> - school year semester (nominal:’ First’,’ Second’)</li>
+            <li><b>Parent</b> - responsible for student (nominal:’mom’,’father’)</li>
+            <li><b>Raised hand</b> - how many times the student raises his/her hand on classroom (numeric:0-100)</li>
+            <li><b>Visited resources</b> - how many times the student visits a course content(numeric:0-100)</li>
+            <li><b>Discussion groups</b> - how many times the student participate on discussion groups (numeric:0-100)</li>
+            <li><b>Parent Answering Survey</b> - parent answered the surveys which are provided from school or not (nominal:’Yes’,’No’)</li>
+            <li><b>Parent School Satisfaction</b> - the Degree of parent satisfaction from school(nominal:’Yes’,’No’)</li>
+            <li><b>Student Absence Days</b> - the number of absence days for each student (nominal: above-7, under-7)</li>
+          </ul>      
+              
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid bg-dark text-white" style="padding: 20px 0">
+    <div class="container">
+      <small>&copy; 2019. Bintang & Fentyka</small>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

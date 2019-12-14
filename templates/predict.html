@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Mas Aldi</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Students' Academic Performance Dataset (xAPI-Edu-Data)</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/form_predict">Prediksi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://ibb.co/WfDDwYN  " target="_blank">Flowchart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid pt-5 pb-5">
+    <div class="container">
+      
+      <h2>Students' Academic Performance</h2>
+
+      <form action="{{ url_for('predict')}}" method="POST">
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select name="gender" class="form-control">
+            <option value="">- Select Your Gender -</option>
+            <option value="1">Boy</option>
+            <option value="0">Girl</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="national">National</label>
+          <select name="national" class="form-control">
+            <option value="">- Select Your Nationality -</option>
+            <option value="0">Egypt</option>
+            <option value="1">Iran</option>
+            <option value="2">Iraq</option>
+            <option value="3">Jordan</option>
+            <option value="4">Kuwait</option>
+            <option value="5">Lybia</option>
+            <option value="6">Morocco</option>
+            <option value="7">Palestine</option>
+            <option value="8">SaudiArabia</option>
+            <option value="9">Syria</option>
+            <option value="10">Tunis</option>
+            <option value="11">USA</option>
+            <option value="12">lebanon</option>
+            <option value="13">venzuela</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="placeofbirth">Place of Birth</label>
+          <select name="placeofbirth" class="form-control">
+            <option value="">- Select Your Nationality -</option>
+            <option value="0">Egypt</option>
+            <option value="1">Iran</option>
+            <option value="2">Iraq</option>
+            <option value="3">Jordan</option>
+            <option value="4">Kuwait</option>
+            <option value="5">Lybia</option>
+            <option value="6">Morocco</option>
+            <option value="7">Palestine</option>
+            <option value="8">SaudiArabia</option>
+            <option value="9">Syria</option>
+            <option value="10">Tunis</option>
+            <option value="11">USA</option>
+            <option value="12">lebanon</option>
+            <option value="13">venzuela</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="stageid">Educational Stage</label>
+          <select name="stageid" class="form-control">
+            <option value="">- Select Your Edu Stage -</option>
+            <option value="0">HighSchool</option>
+            <option value="1">MiddleSchool</option>
+            <option value="2">lowerlevel</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="gradeid">Grade Levels</label>
+          <select name="gradeid" class="form-control">
+            <option value="">- Select Your Grade Levels -</option>
+            <option value="0">G-02</option>
+            <option value="1">G-04</option>
+            <option value="2">G-05</option>
+            <option value="3">G-06</option>
+            <option value="4">G-07</option>
+            <option value="5">G-08</option>
+            <option value="6">G-09</option>
+            <option value="7">G-10</option>
+            <option value="8">G-11</option>
+            <option value="9">G-12</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sectionid">Section ID</label>
+          <select name="sectionid" class="form-control">
+            <option value="">- Select Your SectionID -</option>
+            <option value="0">A</option>
+            <option value="1">B</option>
+            <option value="2">C</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <select name="topic" class="form-control">
+            <option value="">- Select Your Topic -</option>
+            <option value="0">Arabic</option>
+            <option value="1">Biology</option>
+            <option value="2">Chemistry</option>
+            <option value="3">English</option>
+            <option value="4">French</option>
+            <option value="5">Geology</option>
+            <option value="6">History</option>
+            <option value="7">IT</option>
+            <option value="8">Math</option>
+            <option value="9">Quran</option>
+            <option value="10">Science</option>
+            <option value="11">Spanish</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="semester">Semester</label>
+          <select name="semester" class="form-control">
+            <option value="">- Select Your Semester -</option>
+            <option value="0">F</option>
+            <option value="1">S</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="relation">Relation</label>
+          <select name="relation" class="form-control">
+            <option value="">- Select Your Relation -</option>
+            <option value="0">Father</option>
+            <option value="1">Mum</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="bilirubin">Total Raisedhands</label>
+            <input type="number" min="0" max="1000" step="1" name="raisehands" placeholder="raisehands" required="required"/></br>
+        </div>
+
+        <div class="form-group">
+          <label for="visitedresource">Total Visited Resources</label>
+            <input type="number" min="0" max="1000" step="1" name="visitedresource" placeholder="visitedresource" required="required"/></br>
+        </div>
+
+        <div class="form-group">
+          <label for="annview">Total Announcements View</label>
+            <input type="number" min="0" max="1000" step="1" name="annview" placeholder="annview" required="required"/></br>
+        </div>
+
+        <div class="form-group">
+          <label for="discussion">Total Discussion</label>
+            <input type="number" min="0" max="1000" step="1" name="discussion" placeholder="discussion" required="required"/></br>
+        </div>
+
+        <div class="form-group">
+          <label for="parentsurvey">Parent Answering Survey</label>
+          <select name="parentsurvey" class="form-control">
+            <option value="">- Select One -</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="parentsatisfaction">Parent School Satisfaction</label>
+          <select name="parentsatisfaction" class="form-control">
+            <option value="">- Select One -</option>
+            <option value="0">Bad</option>
+            <option value="1">Good</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="studentabsence">Student Absence Days</label>
+          <select name="studentabsence" class="form-control">
+            <option value="">- Select One -</option>
+            <option value="0">Above-7</option>
+            <option value="1">Under-7</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+        
+      </form>
+
+      {{ prediction_text }}
+      
+    </div>
+  </div>
+
+  <div class="container-fluid bg-dark text-white" style="padding: 20px 0">
+    <div class="container">
+      <small>&copy; 2019. Bintang & Fentyka</small>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
